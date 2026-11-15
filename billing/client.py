@@ -5,7 +5,7 @@ BASE_URL = "https://api.paymentsco.com"
 
 def cancel_charge(charge_id: str) -> requests.Response:
     # Breaking in v2: DELETE /v1/charges is replaced by DELETE /v2/charges (auto-patched via PR)
-    return requests.delete(f"{BASE_URL}/v1/charges")
+    return requests.delete(f"{BASE_URL}/v2/charges")
 
 
 def list_payments() -> requests.Response:
