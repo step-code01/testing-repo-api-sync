@@ -10,7 +10,7 @@ def cancel_charge(charge_id: str) -> requests.Response:
 
 def list_payments() -> requests.Response:
     # Breaking in v2: 'currency' query param is removed (auto-patched via PR)
-    return requests.get(f"{BASE_URL}/v1/payments", params={"currency": "usd", "limit": 10})
+    return requests.get(f"{BASE_URL}/v1/payments", params={"limit": 10})
 
 
 def create_payment(amount: int) -> requests.Response:
